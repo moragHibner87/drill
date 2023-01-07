@@ -1,17 +1,171 @@
+:root{
+  --primary: rgb(237 210 94);
+}
 body {
-  font-family: sans-serif;
-  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  margin:0;
+  padding:0;
+}
+*{
+  font-family: 'DM Sans', sans-serif;
+}
+.container{
+  width:100%;
+  max-width:80%;
+  margin:0 auto;
+  padding:0 30px;
+}
+.flex{
+  display:flex;
+  align-items:center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.relative{
+  position: relative;
+}
+.z-1{
+  position:relative;
+  z-index:1;
+}
+#webgi-canvas-container{
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  position: fixed;
+  top:0
 }
 #webgi-canvas {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+  position: fixed;
+  top:0
 }
-#webgi-canvas-container{
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh 10vw;
-  border-radius: 0.5rem;
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 0;
+}
+.btn-black, .btn-yellow{
+  border:none;
+  background-color:black;
+  transition: .3s;
+  border-radius:60px;
+  height:45px;
+  color:white;
+  font-size:18px;
+  padding:0 25px;
+}
+.btn-yellow{
+  background-color: var(--primary);
+  color:black;
+  font-weight:bold;
+}
+.bg-primary{
+  background-color: var(--primary);
+}
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+.section{
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  padding:3vw 0;
+}
+.half-width{
+  width:50%;
+}
+h1{
+  font-size:10vw;
+  line-height:.9;
+  margin:0;
+}
+h2{
+  font-size:5vw;
+  line-height:.9;
+  margin:0;
+}
+p{
+  font-size:1.2vw;
+}
+.section-2 .half-width{
+  width:40%;
+  padding-top:20%;
+}
+.section-2 .container{
+  flex-direction: row-reverse;
+}
+.skew-bg{
+  position:absolute;
+  width:100%;
+  height:85%;
+  top:25%;
+  transform: skew(0deg, 20deg);
+} 
+footer{
+  padding:1.5vw 30px;
+  background-color: black;
+}
+footer .btn-black{
+  background-color: white;
+  color:black;
+  margin:auto;
+  font-weight:bold;
+  display:block;
+}
+.bt-exit{
+  width: 90px;
+  z-index: 5;
+  position: fixed;
+  bottom: 8%;
+  left:0;
+  right:0;
+  margin:auto;
+  visibility: hidden;
+}
+
+.customizer--container{
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  visibility: hidden;
+}
+
+.strap--colors{
+  list-style: none;
+}
+
+.button--colors{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid white;
+  padding: 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button--colors:hover{
+  filter: drop-shadow(0 0 0.55rem rgba(28, 17, 52, 0.44));
+  transform: scale(1.3);
+}
+
+.yellow{
+  background-color: #F0D56C;
+}
+
+.red{
+  background-color: rgb(231, 34, 34);
+}
+
+.black{
+  background-color: rgb(74, 76, 79);
 }
